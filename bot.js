@@ -474,9 +474,8 @@ function isYoutube(str) {
 
      ping = ${Date.now() - message.createdTimestamp}ms
 
-     for help = <!Nadim. | SY#6666>
 
-     By !Nadim. | SY   `)
+     By REX   `)
 
       message.channel.send({embed});
 
