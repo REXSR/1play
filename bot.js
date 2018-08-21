@@ -14,7 +14,7 @@ const fetchVideoInfo = require('youtube-info');
 
 const yt_api_key = "AIzaSyDeoIH0u1e72AtfpwSKKOSy3IPp2UHzqi4";
 
-const prefix = 'R';
+const prefix = 'r';
 
 client.login(process.env.BOT_TOKEN);  //اياكككك تلعب هنا لا تحط توكنك هنا
 
@@ -104,7 +104,7 @@ client.on('message', function(message) {
 
     const args = message.content.split(' ').slice(1).join(' ');
 
-    if (mess.startsWith(prefix + 'play')) {
+    if (mess.startsWith(prefix + 'rplay')) {
 
         if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
 
@@ -210,7 +210,7 @@ client.on('message', function(message) {
 
     }
 
-    else if (mess.startsWith(prefix + 'skip')) {
+    else if (mess.startsWith(prefix + 'rskip')) {
 
         if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
 
@@ -226,7 +226,7 @@ client.on('message', function(message) {
 
     }
 
-    else if (message.content.startsWith(prefix + 'vol')) {
+    else if (message.content.startsWith(prefix + 'rvol')) {
 
         if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
 
@@ -242,7 +242,7 @@ client.on('message', function(message) {
 
     }
 
-    else if (mess.startsWith(prefix + 'pause')) {
+    else if (mess.startsWith(prefix + 'rpause')) {
 
         if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
 
@@ -266,7 +266,7 @@ client.on('message', function(message) {
 
     }
 
-    else if (mess.startsWith(prefix + 'stop')) {
+    else if (mess.startsWith(prefix + 'rstop')) {
 
         if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
 
@@ -278,7 +278,7 @@ client.on('message', function(message) {
 
     }
 
-    else if (mess.startsWith(prefix + 'join')) {
+    else if (mess.startsWith(prefix + 'rjoin')) {
 
         if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
 
@@ -286,7 +286,7 @@ client.on('message', function(message) {
 
     }
 
-    else if (mess.startsWith(prefix + 'play')) {
+    else if (mess.startsWith(prefix + 'rplay')) {
 
         if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
 
@@ -434,7 +434,7 @@ function isYoutube(str) {
 
  client.on('message', message => {
 
-     if (message.content === prefix +"مساعدة") {
+     if (message.content === prefix +"rhelp") {
 
     const embed = new Discord.RichEmbed()
 
@@ -442,27 +442,27 @@ function isYoutube(str) {
 
      .addField(`**__أوامر البوت__**`,`
 
-.    **${prefix}join**
+.    **${prefix}rjoin**
 
      عشان يدخل البوت الروم
 
-     **${prefix}play**
+     **${prefix}rplay**
 
      امر تشغيل الأغنية , !شغل الرابط او اسم الأعنية
 
-     **${prefix}skip**
+     **${prefix}rskip**
 
      تغير الأغنية
 
-     **${prefix}stop**
+     **${prefix}rstop**
 
      ايقاف الأغنية
 
-     **${prefix}pause**
+     **${prefix}rpause**
 
      مواصلة الأغنية
 
-     **${prefix}vol**
+     **${prefix}rvol**
 
      مستوى الصوت 1-100
 
