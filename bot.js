@@ -104,7 +104,7 @@ client.on('message', function(message) {
 
     const args = message.content.split(' ').slice(1).join(' ');
 
-    if (mess.startsWith(prefix + 'rplay')) {
+    if (mess.startsWith(prefix + 'play')) {
 
         if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
 
@@ -210,7 +210,7 @@ client.on('message', function(message) {
 
     }
 
-    else if (mess.startsWith(prefix + 'rskip')) {
+    else if (mess.startsWith(prefix + 'skip')) {
 
         if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
 
@@ -226,7 +226,7 @@ client.on('message', function(message) {
 
     }
 
-    else if (message.content.startsWith(prefix + 'rvol')) {
+    else if (message.content.startsWith(prefix + 'vol')) {
 
         if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
 
@@ -242,7 +242,7 @@ client.on('message', function(message) {
 
     }
 
-    else if (mess.startsWith(prefix + 'rpause')) {
+    else if (mess.startsWith(prefix + 'pause')) {
 
         if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
 
@@ -266,7 +266,7 @@ client.on('message', function(message) {
 
     }
 
-    else if (mess.startsWith(prefix + 'rstop')) {
+    else if (mess.startsWith(prefix + 'stop')) {
 
         if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
 
@@ -278,7 +278,7 @@ client.on('message', function(message) {
 
     }
 
-    else if (mess.startsWith(prefix + 'rjoin')) {
+    else if (mess.startsWith(prefix + 'join')) {
 
         if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
 
@@ -286,7 +286,7 @@ client.on('message', function(message) {
 
     }
 
-    else if (mess.startsWith(prefix + 'rplay')) {
+    else if (mess.startsWith(prefix + 'play')) {
 
         if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
 
