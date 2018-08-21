@@ -26,7 +26,7 @@ client.on('ready', () => {
 
 client.on('ready', () => {
 
-  client.user.setGame('1play','https://www.twitch.tv/peery13');
+  client.user.setGame('Rėx~Músic.','https://www.twitch.tv/peery13');
 
 });
 
