@@ -434,7 +434,7 @@ function isYoutube(str) {
 
  client.on('message', message => {
 
-     if (message.content === prefix +"rhelp") {
+     if (message.content === prefix +"help") {
 
     const embed = new Discord.RichEmbed()
 
