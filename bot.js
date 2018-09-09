@@ -257,45 +257,35 @@ client.on('message', message => {
 });
 
 
+client.on('message', message => {
+  if (message.author.bot) return;
+   if (message.content === prefix + "help") {
+      message.react("☑")            
 
+   
+      message.author.sendMessage(`**شكرا لك لاستعمال البوت**
 
+╔[❖════════════════════════════════════❖]╗
+❖${prefix}**play** ==>**لي تشغيل الموسيقى**
+❖${prefix}**stop** ==>**لي ايقاف الموسيقى**
+❖${prefix}**skip** ==>**لي تغير الموسيقى**
+❖${prefix}**pause** ==>*لي ايقاف الموسيقى مؤقتا***
+❖${prefix}**np** ==>**لي تكملت الموسيقى**
+❖${prefix}**vol** ==>**لي التحكم بالصوت**
+___وشكرا___
+╚[❖════════════════════════════════════❖]╝
+`);
 
-
-client.on('ready', function(){    
-
-    var ms = 150000 ;    // السرعة لا  تغيرها عشان ما تتبند 
-
-    var prefix = "*"; 
-
-    var setGame = [`المستخدمين : ${client.users.size}`,`${prefix}help`,`االسيرفرات : ${client.guilds.size}`];    // لا تلعب بشيء
-
-    var i = -1;    
-
-    var j = 0;    
-
-    setInterval(function (){    
-
-        if( i == -1 ){    
-
-j = 1;    
-
-       }    
-
-        if( i == (setGame.length)-1 ){    
-
-            j = -1;    
-
-      }    
-
-       i = i+j;    
-
-        client.user.setGame(setGame[i],`http://www.youtube.com/AlphaCodes!`);    // حقوقنا فضلا اتركها وشائنها
-
-}, ms);    
-
-    
-
+}
 });
+
+
+
+
+
+        
+
+      
 
 
 
