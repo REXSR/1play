@@ -8,24 +8,15 @@ const youtube = new YouTube("AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8");
 const queue = new Map();
 const client = new Discord.Client();
 
-/*
-البكجآت
-npm install discord.js
-npm install ytdl-core
-npm install get-youtube-id
-npm install youtube-info
-npm install simple-youtube-api
-npm install queue
-*/
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
     console.log(`in ${client.guilds.size} servers `)
-    console.log(`[Kahrba] ${client.users.size}`)
-    client.user.setStatus("idle")
+    console.log(`[NAWAF] ${client.users.size}`)
+    client.user.setStatus("streaming")
 });
  
-const prefix = "r"
+const prefix = "*"
 client.on('message', async msg => { // eslint-disable-line
 	if (msg.author.bot) return undefined;
 	 
@@ -76,7 +67,7 @@ client.on('message', async msg => { // eslint-disable-line
 			        .setDescription(`**الرجآء من حضرتك إختيآر رقم المقطع** :
 ${videos.map(video2 => `[**${++index} **] \`${video2.title}\``).join('\n')}`)
  
-					.setFooter("Kahrba")
+					.setFooter("NAWAF")
 					msg.channel.sendEmbed(embed1).then(message =>{message.delete(20000)})
 					
 					// eslint-disable-next-line max-depth
@@ -243,26 +234,31 @@ if (message.content.startsWith(adminprefix + 'setT')) {
 
 });
 
-client.on("message", message => {
- if (message.content === `${prefix}`) {
-  const embed = new Discord.RichEmbed()  
-      .setColor("#000000") 
-      .setDescription(`
-${prefix}play ⇏ لتشغيل أغنية برآبط أو بأسم
-${prefix}skip ⇏ لتجآوز الأغنية الحآلية
-${prefix}pause ⇏ إيقآف الأغنية مؤقتا
-${prefix}resume ⇏ لموآصلة الإغنية بعد إيقآفهآ مؤقتا
-${prefix}vol ⇏ لتغيير درجة الصوت 100 - 0
-${prefix}stop ⇏ لإخرآج البوت من الروم
-${prefix}np ⇏ لمعرفة الأغنية المشغلة حآليا
-${prefix}queue ⇏ لمعرفة قآئمة التشغيل
 
- `) 
-   message.channel.sendEmbed(embed) 
-    
-   }
-   }); 
-   
+
+
+
+client.on('message', message => {
+
+  if(message.content === '*inv') {
+
+  const embed = new Discord.RichEmbed()
+
+  .setTitle('اضعط هنا')
+
+  .setURL('https://discordapp.com/oauth2/authorize?client_id=470275260240101397&scope=bot&permissions=1')
+
+  .setColor('RANDOM')
+
+  message.channel.send({embed: embed});
+
+  }
+
+});
+
+
+
+
 
 
 
