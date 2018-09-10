@@ -335,39 +335,15 @@ Discord API: ${client.ping.toFixed(0)} ms\`\`\``);
 
 });       
 
-client.on('guildCreate', guild => {
 
-    
 
-  client.channels.get("488406701582843920")
 
-const embed = new Discord.RichEmbed()
 
-   .setAuthor(بوتك دخل سيرفر جديد مبروك ✅)
 
-   .setDescription(**
 
-Server name: __${guild.name}__
 
-Server id: __${guild.id}__
 
-Server owner: __${guild.owner}__
 
-Member Count: __${guild.memberCount}__
-
-Servers Counter : __${client.guilds.size}__**)
-
-         .setColor("#f3ae10")
-
-         .addField("New Server!")
-
-         .setFooter('*play Bot' , client.user.avatarURL)
-
-           client.channels.get("488406701582843920").send({embed});
-
-}
-
-);      
 
 
 
