@@ -341,9 +341,7 @@ Discord API: ${client.ping.toFixed(0)} ms\`\`\``);
 
   
 
-  const Discord = require('discord.js');
 
-const client = new Discord.Client();
 
 client.on('ready',async () => {
 
