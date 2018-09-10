@@ -13,7 +13,7 @@ client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
     console.log(`in ${client.guilds.size} servers `)
     console.log(`[NAWAF] ${client.users.size}`)
-    client.user.setStatus("streaming")
+    client.user.setStatus("online")
 });
  
 const prefix = "*"
@@ -282,6 +282,39 @@ __وشكرا__
 
 
 
+
+client.on("ready", async () => {
+    if(client.guilds.size > 1) {
+        client.user.setActivity(`Im on ${client.guilds.size} servers!`);
+        console.log(`${client.user.username} is online on ${client.guilds.size} servers!`)
+    } else {
+        client.user.setActivity(`Im on ${client.guilds.size} servers!`);
+        console.log(`${client.user.username} is online on ${client.guilds.size} server!`)
+    }
+    client.user.setStatus("online");
+});
+
+client.on("guildCreate", guild => {
+    console.log("Joined a new guild: " + guild.name);
+    if(client.guilds.size > 1) {
+        client.user.setActivity(`Im on ${client.guilds.size} servers!`);
+    } else {
+        client.user.setActivity(`Im on ${client.guilds.size} servers!`);
+    }
+});
+
+client.on("guildDelete", guild => {
+    console.log("Left a guild: " + guild.name);
+    if(client.guilds.size > 1) {
+        client.user.setActivity(`Im on ${client.guilds.size} servers!`);
+    } else {
+        client.user.setActivity(`Im on ${client.guilds.size} servers!`);
+    }
+});
+
+client.on("message", async () => {
+  
+})
 
 
         
