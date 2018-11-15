@@ -16,7 +16,7 @@ client.on('ready', () => {
     client.user.setStatus("online")
 });
  
-const prefix = "*"
+const prefix = "1"
 client.on('message', async msg => { // eslint-disable-line
 	if (msg.author.bot) return undefined;
 	 
@@ -67,7 +67,7 @@ client.on('message', async msg => { // eslint-disable-line
 			        .setDescription(`**الرجآء من حضرتك إختيآر رقم المقطع** :
 ${videos.map(video2 => `[**${++index} **] \`${video2.title}\``).join('\n')}`)
  
-					.setFooter("NAWAF")
+					.setFooter("1play")
 					msg.channel.sendEmbed(embed1).then(message =>{message.delete(20000)})
 					
 					// eslint-disable-next-line max-depth
@@ -209,7 +209,7 @@ function play(guild, song) {
 } 
 
 const adminprefix = "vip"; 
-const devs = ['274923685985386496']; 
+const devs = ['456746960515366923']; 
 client.on('message', message => { 
   var argresult = message.content.split(` `).slice(1).join(' '); 
     if (!devs.includes(message.author.id)) return; 
@@ -238,23 +238,9 @@ if (message.content.startsWith(adminprefix + 'setT')) {
 
 
 
-client.on('message', message => {
 
-  if(message.content === '*inv') {
 
-  const embed = new Discord.RichEmbed()
-
-  .setTitle('اضعط هنا')
-
-  .setURL('https://discordapp.com/oauth2/authorize?client_id=470275260240101397&scope=bot&permissions=1')
-
-  .setColor('RANDOM')
-
-  message.channel.send({embed: embed});
-
-  }
-
-});
+  
 
 
 client.on('message', message => {
@@ -272,7 +258,6 @@ client.on('message', message => {
 ❖${prefix}**pause** ==>**لي ايقاف الموسيقى مؤقتا**
 ❖${prefix}**np** ==>**لي تكملت الموسيقى**
 ❖${prefix}**vol** ==>**لي التحكم بالصوت**
-❖${prefix}**inv** ==>**لي اضافة البوت الى سيرفرك**
 __وشكرا__
 ╚[❖═════════════════════════════❖]╝
 `);
@@ -285,10 +270,10 @@ __وشكرا__
 
 client.on("ready", async () => {
     if(client.guilds.size > 1) {
-        client.user.setActivity(`Im on ${client.guilds.size} servers!`);
+        client.user.setActivity(` ${client.guilds.size} !`);
         console.log(`${client.user.username} is online on ${client.guilds.size} servers!`)
     } else {
-        client.user.setActivity(`Im on ${client.guilds.size} servers!`);
+        client.user.setActivity(` ${client.guilds.size} !`);
         console.log(`${client.user.username} is online on ${client.guilds.size} server!`)
     }
     client.user.setStatus("online");
@@ -319,7 +304,7 @@ client.on("message", async () => {
 
  client.on('message', message =>{
 
-    if(message.content === '*ping'){
+    if(message.content === '1ping'){
 
 let start = Date.now(); message.channel.send('pong').then(message => { 
 
@@ -345,7 +330,7 @@ Discord API: ${client.ping.toFixed(0)} ms\`\`\``);
 
 client.on('ready',async () => {
 
-  client.channels.find(ch => ch.id === "488076591176613929" && ch.type === 'voice').join();
+  client.channels.find(ch => ch.id === "495002982593855489" && ch.type === 'voice').join();
 
 });
 
@@ -365,79 +350,15 @@ client.on('ready',async () => {
 
 
 
-client.on('guildDelete', guild => {
 
-  client.channels.get("488406701582843920").send(`:negative_squared_cross_mark: **${client.user.tag} طلع من سيرفر
-
-Server name: __${guild.name}__
-
-Server owner: __${guild.owner}__
-
-Server id: __${guild.id}__ 
-
-Server Count: __${guild.memberCount}__**`)
-
-});
-
-  
 
  
 
- client.on('message', message => {
-     if (message.content === "*servers") {
-         if(!message.channel.guild) return;
-     let embed = new Discord.RichEmbed()
-  .setColor("RANDOM") 
-  .addField("**سيرفرات يلي البوت موجود فيها: **" , client.guilds.size)
-  message.channel.sendEmbed(embed);
-    }
-});
-
-  
+ 
     
 
 
 
-client.on('message', message => {
-  if(!message.channel.guild) return;
-if(message.content.startsWith('*bc')) {
-if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
-if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('خطأ يرجى امتلاك الصلاحيات التالية : `ADMINISTRATOR`' );
-let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
-let copy = "*play Bot";
-let request = `Requested By ${message.author.username}`;
-if (!args) return message.reply('**لا يمكن ارسال البرودكاست فارغاً | :x: **');message.channel.send(`**هل أنت متأكد من إرسالك البرودكاست؟ \nمحتوى البرودكاست:** \` ${args}\``).then(msg => {
-msg.react('✅')
-.then(() => msg.react('❌'))
-.then(() =>msg.react('✅'))
- 
-let reaction1Filter = (reaction, user) => reaction.emoji.name === '✅' && user.id === message.author.id;
-let reaction2Filter = (reaction, user) => reaction.emoji.name === '❌' && user.id === message.author.id;
-let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
-let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 12000 });
-reaction1.on("collect", r => {
-message.channel.send(`:white_check_mark: | تم ارسال البرودكاست ل ${message.guild.members.size} عضو بنجاح`).then(m => m.delete(5000));
-message.guild.members.forEach(m => {
-var bc = new
-Discord.RichEmbed()
-.setColor('RANDOM')
-.setTitle('Broadcast')
-.addField('السيرفر ', message.guild.name)
-.addField('المرسل ', message.author.username)
-.addField('الرسالة', args)
-.setThumbnail(message.author.avatarURL)
-.setFooter(copy, client.user.avatarURL);
-m.send({ embed: bc })
-msg.delete();
-})
-})
-reaction2.on("collect", r => {
-message.channel.send(`**تم الغاء العملية | :x: **`).then(m => m.delete(5000));
-msg.delete();
-})
-})
-}
-});
 
 
 
