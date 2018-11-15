@@ -268,16 +268,7 @@ __وشكرا__
 
 
 
-client.on("ready", async () => {
-    if(client.guilds.size > 1) {
-        client.user.setActivity(` ${client.guilds.size} !`);
-        console.log(`${client.user.username} is online on ${client.guilds.size} servers!`)
-    } else {
-        client.user.setActivity(` ${client.guilds.size} !`);
-        console.log(`${client.user.username} is online on ${client.guilds.size} server!`)
-    }
-    client.user.setStatus("online");
-});
+
 
 client.on("guildCreate", guild => {
     console.log("Joined a new guild: " + guild.name);
